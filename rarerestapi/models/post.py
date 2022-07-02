@@ -1,11 +1,11 @@
 from django.db import models
 
-from rarerestapi.models.user import User
+from rarerestapi.models.rare_users import RareUser
 from rarerestapi.models.categories import Categories
 
 
 class Post(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(RareUser, on_delete=models.CASCADE)
     category_id = models.ForeignKey(Categories, on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     publication_date = models.DateField()
