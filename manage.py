@@ -20,3 +20,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+SECRET_KEY = os.environ.get('MY_SECRET_KEY')
