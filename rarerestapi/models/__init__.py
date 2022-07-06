@@ -7,5 +7,6 @@ from .tag import Tag
 from .post_reactions import PostReaction
 from .subscriptions import Subscription
 from .demotion_que import DemotionQue
+from .reactions import Reaction
 
 
