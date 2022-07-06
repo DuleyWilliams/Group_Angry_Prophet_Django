@@ -9,5 +9,4 @@ class RareUser(models.Model):
     bio = models.CharField(max_length=50)
     profile_image_url = models.ImageField(
         upload_to=None, height_field=None, width_field=None, max_length=100)
-    created_on = models.DateTimeField
-    active = models.BigAutoField
+    

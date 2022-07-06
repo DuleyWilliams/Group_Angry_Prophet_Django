@@ -9,8 +9,8 @@ class Subscription(models.Model):
     Args:
         models (_type_): _description_
     """
-    follower_id = models.ForeignKey(RareUser, on_delete=models.CASCADE)
-    author_id = models.ForeignKey(RareUser, on_delete=models.CASCADE)
+    follower_id = models.ForeignKey(RareUser, on_delete=models.CASCADE, related_name="follower_id")
+    author_id = models.ForeignKey(RareUser, on_delete=models.CASCADE, related_name="author_id")
     content = models.CharField(max_length=55)
     created_on = models.DateField()
     ended_on = models.DateField()
