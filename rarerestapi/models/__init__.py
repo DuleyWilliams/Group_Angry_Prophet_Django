@@ -6,5 +6,5 @@ from .post_tags import PostTag
 from .tag import Tag
 from .post_reactions import PostReaction
 from .subscriptions import Subscription
-
+from .reactions import Reaction
 
