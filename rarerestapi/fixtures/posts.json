@@ -1,0 +1,29 @@
+[
+    {
+        "user_id": 1,
+        "category_id": 1,
+        "title": "non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis",
+        "publication_date": "8/23/2021",
+        "image_url": "http://dummyimage.com/114x100.png/cc0000/ffffff",
+        "content": "amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in",
+        "approved": false
+    },
+    {
+        "user_id": 2,
+        "category_id": 2,
+        "title": "iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc",
+        "publication_date": "11/11/2021",
+        "image_url": "http://dummyimage.com/227x100.png/ff4444/ffffff",
+        "content": "pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse",
+        "approved": false
+    },
+    {
+        "user_id": 3,
+        "category_id": 3,
+        "title": "eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis",
+        "publication_date": "1/24/2022",
+        "image_url": "http://dummyimage.com/138x100.png/cc0000/ffffff",
+        "content": "maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi",
+        "approved": false
+    }
+]

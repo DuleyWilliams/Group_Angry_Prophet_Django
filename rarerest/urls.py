@@ -17,6 +17,12 @@ from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
 from rarerestapi.views.auth import register_user, login_user
+from rest_framework import routers
+from rarerestapi.views.post import PostView
+
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'post', PostView, 'posts')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
