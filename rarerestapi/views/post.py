@@ -68,12 +68,11 @@ class PostView(ViewSet):
         post.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-        
-    def destroy(self,request,pk):
+
+    def destroy(self, request, pk):
         post = Post.objects.get(pk=pk)
         post.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-    
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -82,3 +81,4 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('id', 'user_id', 'category_id', 'title',
                   'publication_date', 'image_url', 'content', 'approved')
+        depth = 2

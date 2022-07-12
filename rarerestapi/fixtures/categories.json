@@ -1,0 +1,23 @@
+[
+    {
+        "model": "rarerestapi.categories",
+        "pk": 1,
+        "fields": {
+            "label": "political"
+        }
+    },
+    {
+        "model": "rarerestapi.categories",
+        "pk": 2,
+        "fields": {
+            "label": "just for fun"
+        }
+    },
+    {
+        "model": "rarerestapi.categories",
+        "pk": 3,
+        "fields": {
+            "label": "business"
+        }
+    }
+]
