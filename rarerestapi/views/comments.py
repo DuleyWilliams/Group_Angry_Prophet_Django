@@ -18,10 +18,10 @@ class CommentView(ViewSet):
         serializer = CommentSerializer(comment)
         return Response(serializer.data)
     
-    def list(sefl,request):
+    def list(self,request):
         
         comment = Comment.objects.all()
-        serializer = CommentSerializer
+        serializer = CommentSerializer(comment, many=True)
         return Response(serializer.data)
     
     def create(self,request):
@@ -38,6 +38,21 @@ class CommentView(ViewSet):
         serializer = CommentSerializer(post)
         return Response(serializer.data)
     
+    def update(self,request, pk):
+        comment = Comment.objects.get(pk=pk)
+        comment.content = request.data["content"]
+        comment.created_on = request.data["created_on"]
+        
+        post = Post.objects.get(pk=request.data["post"])
+        comment.post_id = post
+        comment.save()
+        
+        
+    def destroy(self,request,pk):
+        comment = Comment.objects.get(pk=pk)
+        comment.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
         
     
     
