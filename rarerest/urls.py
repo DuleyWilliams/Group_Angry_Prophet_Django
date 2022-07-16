@@ -20,10 +20,12 @@ from django.urls import path
 from rarerestapi.views.auth import register_user, login_user
 from rest_framework import routers
 from rarerestapi.views.post import PostView
+# from rarerestapi.views.post import CategoryViews
 
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'post', PostView, 'posts')
+# router.register(r'categories', CategoryViews, 'categories')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
