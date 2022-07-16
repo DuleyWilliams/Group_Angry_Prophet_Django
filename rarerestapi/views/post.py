@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from django.core.exceptions import ValidationError
 from rarerestapi.models import Post
+from rarerestapi.models import categories
 from rarerestapi.models.post import Post
 from rarerestapi.models.rare_users import RareUser
 from rarerestapi.models.categories import Categories
@@ -21,9 +22,14 @@ class PostView(ViewSet):
         return Response(serializer.data)
 
     def list(self, request):
+        # ch6 replaces this code
         """Handle GET requests to get all Posts """
-        post = Post.objects.all()
-        serializer = PostSerializer(post, many=True)
+        post_view = Post.objects.all()
+        category = request.query_params.get('category', None)
+        if category is not None:
+            post = post.filter(category_id=category)
+
+        serializer = PostSerializer(post_view, many=True)
         return Response(serializer.data)
 
     def create(self, request):
